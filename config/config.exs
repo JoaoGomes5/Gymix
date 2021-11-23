@@ -7,15 +7,19 @@
 # General application configuration
 use Mix.Config
 
-config :wabanex,
-  ecto_repos: [Wabanex.Repo]
+config :gymix,
+  ecto_repos: [Gymix.Repo]
+
+config :gymix, Gymix.Repo,
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
 
 # Configures the endpoint
-config :wabanex, WabanexWeb.Endpoint,
+config :gymix, GymixWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "dVplgM1nz3356m2jBHxVANdL2Ft1hJWo1cX06bGy/RK1bml0y8LV9AZSbBPL09yY",
-  render_errors: [view: WabanexWeb.ErrorView, accepts: ~w(json), layout: false],
-  pubsub_server: Wabanex.PubSub,
+  render_errors: [view: GymixWeb.ErrorView, accepts: ~w(json), layout: false],
+  pubsub_server: Gymix.PubSub,
   live_view: [signing_salt: "DSHpISNW"]
 
 # Configures Elixir's Logger

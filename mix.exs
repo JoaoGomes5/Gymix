@@ -1,9 +1,9 @@
-defmodule Wabanex.MixProject do
+defmodule Gymix.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :wabanex,
+      app: :gymix,
       version: "0.1.0",
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -19,7 +19,7 @@ defmodule Wabanex.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Wabanex.Application, []},
+      mod: {Gymix.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

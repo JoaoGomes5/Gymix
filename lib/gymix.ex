@@ -1,6 +1,6 @@
-defmodule Wabanex do
+defmodule Gymix do
   @moduledoc """
-  Wabanex keeps the contexts that define your domain
+  Gymix keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

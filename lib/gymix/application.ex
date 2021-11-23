@@ -1,4 +1,4 @@
-defmodule Wabanex.Application do
+defmodule Gymix.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -8,27 +8,27 @@ defmodule Wabanex.Application do
   def start(_type, _args) do
     children = [
       # Start the Ecto repository
-      Wabanex.Repo,
+      Gymix.Repo,
       # Start the Telemetry supervisor
-      WabanexWeb.Telemetry,
+      GymixWeb.Telemetry,
       # Start the PubSub system
-      {Phoenix.PubSub, name: Wabanex.PubSub},
+      {Phoenix.PubSub, name: Gymix.PubSub},
       # Start the Endpoint (http/https)
-      WabanexWeb.Endpoint
-      # Start a worker by calling: Wabanex.Worker.start_link(arg)
-      # {Wabanex.Worker, arg}
+      GymixWeb.Endpoint
+      # Start a worker by calling: Gymix.Worker.start_link(arg)
+      # {Gymix.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Wabanex.Supervisor]
+    opts = [strategy: :one_for_one, name: Gymix.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    WabanexWeb.Endpoint.config_change(changed, removed)
+    GymixWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

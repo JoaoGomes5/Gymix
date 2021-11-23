@@ -1,10 +1,10 @@
 use Mix.Config
 
 # Configure your database
-config :wabanex, Wabanex.Repo,
+config :gymix, Gymix.Repo,
   username: "postgres",
   password: "postgres",
-  database: "wabanex_dev",
+  database: "gymix_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -15,7 +15,7 @@ config :wabanex, Wabanex.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :wabanex, WabanexWeb.Endpoint,
+config :gymix, GymixWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,

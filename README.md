@@ -1,4 +1,4 @@
-# Wabanex
+# Gymix
 
 To start your Phoenix server:
 

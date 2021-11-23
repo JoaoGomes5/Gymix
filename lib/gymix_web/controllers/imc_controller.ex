@@ -1,7 +1,7 @@
-defmodule WabanexWeb.IMCController do
-  use WabanexWeb, :controller
+defmodule GymixWeb.IMCController do
+  use GymixWeb, :controller
 
-  alias  Wabanex.IMC
+  alias  Gymix.IMC
 
   def index(connection, params) do
      params

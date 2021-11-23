@@ -1,12 +1,12 @@
-defmodule WabanexWeb do
+defmodule GymixWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use WabanexWeb, :controller
-      use WabanexWeb, :view
+      use GymixWeb, :controller
+      use GymixWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,19 +19,19 @@ defmodule WabanexWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: WabanexWeb
+      use Phoenix.Controller, namespace: GymixWeb
 
       import Plug.Conn
-      import WabanexWeb.Gettext
-      alias WabanexWeb.Router.Helpers, as: Routes
+      import GymixWeb.Gettext
+      alias GymixWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/wabanex_web/templates",
-        namespace: WabanexWeb
+        root: "lib/gymix_web/templates",
+        namespace: GymixWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -54,7 +54,7 @@ defmodule WabanexWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import WabanexWeb.Gettext
+      import GymixWeb.Gettext
     end
   end
 
@@ -63,9 +63,9 @@ defmodule WabanexWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import WabanexWeb.ErrorHelpers
-      import WabanexWeb.Gettext
-      alias WabanexWeb.Router.Helpers, as: Routes
+      import GymixWeb.ErrorHelpers
+      import GymixWeb.Gettext
+      alias GymixWeb.Router.Helpers, as: Routes
     end
   end
 

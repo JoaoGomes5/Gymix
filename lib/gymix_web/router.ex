@@ -1,11 +1,11 @@
-defmodule WabanexWeb.Router do
-  use WabanexWeb, :router
+defmodule GymixWeb.Router do
+  use GymixWeb, :router
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/api", WabanexWeb do
+  scope "/api", GymixWeb do
     pipe_through :api
 
     get "/", IMCController, :index
@@ -23,7 +23,7 @@ defmodule WabanexWeb.Router do
 
     scope "/" do
       pipe_through [:fetch_session, :protect_from_forgery]
-      live_dashboard "/dashboard", metrics: WabanexWeb.Telemetry
+      live_dashboard "/dashboard", metrics: GymixWeb.Telemetry
     end
   end
 end

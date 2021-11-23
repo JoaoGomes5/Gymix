@@ -1,4 +1,4 @@
-defmodule Wabanex.IMC do
+defmodule Gymix.IMC do
 
   def calculate(%{"filename" => filename}) do
     filename

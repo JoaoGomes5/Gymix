@@ -1,16 +1,16 @@
-defmodule WabanexWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :wabanex
+defmodule GymixWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :gymix
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_wabanex_key",
+    key: "_gymix_key",
     signing_salt: "vU0XEo2V"
   ]
 
-  socket "/socket", WabanexWeb.UserSocket,
+  socket "/socket", GymixWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -22,7 +22,7 @@ defmodule WabanexWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :wabanex,
+    from: :gymix,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -30,7 +30,7 @@ defmodule WabanexWeb.Endpoint do
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :wabanex
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :gymix
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
@@ -48,5 +48,5 @@ defmodule WabanexWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug WabanexWeb.Router
+  plug GymixWeb.Router
 end

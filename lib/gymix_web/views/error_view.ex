@@ -1,5 +1,5 @@
-defmodule WabanexWeb.ErrorView do
-  use WabanexWeb, :view
+defmodule GymixWeb.ErrorView do
+  use GymixWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

@@ -1,11 +1,11 @@
-defmodule WabanexWeb.Gettext do
+defmodule GymixWeb.Gettext do
   @moduledoc """
   A module providing Internationalization with a gettext-based API.
 
   By using [Gettext](https://hexdocs.pm/gettext),
   your module gains a set of macros for translations, for example:
 
-      import WabanexWeb.Gettext
+      import GymixWeb.Gettext
 
       # Simple translation
       gettext("Here is the string to translate")
@@ -20,5 +20,5 @@ defmodule WabanexWeb.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :wabanex
+  use Gettext, otp_app: :gymix
 end

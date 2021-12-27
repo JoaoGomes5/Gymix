@@ -3,7 +3,7 @@ use Mix.Config
 # Configure your database
 config :gymix, Gymix.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "docker",
   database: "gymix_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,

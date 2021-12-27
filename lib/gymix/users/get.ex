@@ -5,7 +5,8 @@ defmodule Gymix.User.Get do
     Repo,
     User
   }
-  def call(id)  do
+
+  def call(id) do
     id
     |> UUID.cast()
     |> handle_response()
@@ -13,7 +14,7 @@ defmodule Gymix.User.Get do
 
   defp handle_response({:ok, uuid}) do
     case Repo.get(User, uuid) do
-      nil ->  {:error, "User not found"}
+      nil -> {:error, "User not found"}
       user -> {:ok, user}
     end
   end

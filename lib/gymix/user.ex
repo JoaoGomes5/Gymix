@@ -2,15 +2,15 @@ defmodule Gymix.User do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @primary_key { :id, :binary_id, autogenerate: true}
+  @primary_key {:id, :binary_id, autogenerate: true}
   @fields [:email, :password, :name]
 
   schema "users" do
-      field :email, :string
-      field :name, :string
-      field :password, :string
+    field :email, :string
+    field :name, :string
+    field :password, :string
 
-      timestamps()
+    timestamps()
   end
 
   def changeset(params) do
@@ -20,7 +20,7 @@ defmodule Gymix.User do
     |> validate_required(@fields)
     |> validate_length(:password, min: 6)
     |> validate_length(:name, min: 2)
-    |> validate_format(:email, ~r/@/ )
+    |> validate_format(:email, ~r/@/)
     # Feito na database
     |> unique_constraint([:email])
   end
